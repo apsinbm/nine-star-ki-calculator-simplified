@@ -101,7 +101,7 @@ export default function ProfileResult({ profile, birthDate, birthTime, timezone 
 
         {/* Birth information */}
         <div className="space-y-1 text-sm text-sumi-600">
-          <p>Born on {formatDate(profile.birthDate, 'MMMM d, yyyy')} at {birthTime} {timezone}</p>
+          <p>Born on {formatDate(profile.birthDate, 'MMMM d, yyyy')}</p>
           <p className="text-xs text-sumi-500">
             Solar year {solarYear} {solarYear !== gregorianYear && `(Gregorian: ${gregorianYear})`}
           </p>
@@ -280,93 +280,6 @@ export default function ProfileResult({ profile, birthDate, birthTime, timezone 
         <h3 className="mb-4 font-serif text-lg font-medium text-sumi-900">
           Understanding Your Results
         </h3>
-
-        {/* Why Time Matters Section */}
-        <div className="border-l-4 border-ai-400 bg-ai-50 p-4">
-          <button
-            onClick={() => setExpandedSection(expandedSection === 'time-matters' ? null : 'time-matters')}
-            className="flex w-full items-center justify-between text-left"
-          >
-            <h4 className="font-semibold text-ai-900">
-              Why Does Birth Time Matter?
-            </h4>
-            <svg
-              className={`h-5 w-5 text-ai-600 transition-transform ${expandedSection === 'time-matters' ? 'rotate-180' : ''}`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          {expandedSection === 'time-matters' && (
-            <div className="mt-4 animate-slide-up space-y-3 text-sm text-ai-800">
-              <p>
-                Nine Star Ki uses the <strong>solar calendar</strong>, where the year begins at Li Chun (around Feb 4), not January 1st.
-                Solar terms mark precise astronomical moments based on Earth&apos;s position around the Sun.
-              </p>
-              <p>
-                <strong>Example:</strong> Li Chun 1986 occurred at 2:50 AM UTC. Someone born at 1:50 AM (1 hour before) would have principal star 6,
-                while someone born at 3:50 AM (1 hour after) would have principal star 5.
-              </p>
-              <button
-                onClick={() => setShowHelp('why-time-matters')}
-                className="font-medium text-ai-700 hover:text-ai-900 hover:underline"
-              >
-                Learn more →
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Time Sensitivity Section */}
-        <div className="border-l-4 border-shu-400 bg-shu-50 p-4">
-          <button
-            onClick={() => setExpandedSection(expandedSection === 'time-sensitivity' ? null : 'time-sensitivity')}
-            className="flex w-full items-center justify-between text-left"
-          >
-            <h4 className="font-semibold text-shu-900">
-              When Is Time Most Critical?
-            </h4>
-            <svg
-              className={`h-5 w-5 text-shu-600 transition-transform ${expandedSection === 'time-sensitivity' ? 'rotate-180' : ''}`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          {expandedSection === 'time-sensitivity' && (
-            <div className="mt-4 animate-slide-up space-y-3 text-sm text-shu-800">
-              <div className="grid gap-2 md:grid-cols-3">
-                <div className="rounded-lg border-2 border-shu-300 bg-white p-3">
-                  <p className="mb-1 font-semibold text-shu-900">HIGH</p>
-                  <p className="text-xs">Within 24 hours of solar term. Time precision critical.</p>
-                </div>
-                <div className="rounded-lg border-2 border-yellow-300 bg-white p-3">
-                  <p className="mb-1 font-semibold text-yellow-900">MEDIUM</p>
-                  <p className="text-xs">1-3 days from solar term. Time still matters.</p>
-                </div>
-                <div className="rounded-lg border-2 border-green-300 bg-white p-3">
-                  <p className="mb-1 font-semibold text-green-900">LOW</p>
-                  <p className="text-xs">7+ days away. Time not critical.</p>
-                </div>
-              </div>
-              <p className="text-xs italic">
-                Note: 80%+ of people are not near boundaries and don&apos;t need to worry about exact birth time.
-              </p>
-              <button
-                onClick={() => setShowHelp('time-sensitivity')}
-                className="font-medium text-shu-700 hover:text-shu-900 hover:underline"
-              >
-                Learn more →
-              </button>
-            </div>
-          )}
-        </div>
 
         {/* Hemisphere Section */}
         <div className="border-l-4 border-green-400 bg-green-50 p-4">
