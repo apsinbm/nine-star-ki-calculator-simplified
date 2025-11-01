@@ -44,96 +44,41 @@ export interface SolarTermsWarning {
 }
 
 /**
- * Generate approximate Li Chun date for a given year
- * Li Chun typically occurs on Feb 3-5 around 16:00-22:00 UTC
+ * Generate Li Chun date using BOOK METHOD (fixed February 4)
+ * Simplified version uses fixed date, not astronomical calculations
  */
 function generateLiChunDate(year: number): Date {
-  // Li Chun cycles approximately every 4 years due to leap years
-  const yearMod4 = year % 4
-  let day = 4
-  let hour = 16
-
-  if (yearMod4 === 0) {
-    day = 4
-    hour = 16 + (year % 100) / 100 * 6
-  } else if (yearMod4 === 1) {
-    day = 3
-    hour = 22
-  } else if (yearMod4 === 2) {
-    day = 4
-    hour = 4
-  } else {
-    day = 4
-    hour = 10
-  }
-
-  return new Date(Date.UTC(year, 1, day, Math.floor(hour), 0, 0))
+  // Book method: Li Chun is ALWAYS February 4 at noon UTC
+  return new Date(Date.UTC(year, 1, 4, 12, 0, 0))
 }
 
 /**
- * Generate approximate dates for all 12 major solar terms
- * These mark the boundaries of the 12 solar months
+ * Generate dates for all 12 major solar terms using BOOK METHOD
+ * Fixed date ranges as per traditional calendar, not astronomical solar terms
+ * This is the simplified method used in the traditional book
  */
 function generateSolarTermsForYear(year: number): YearSolarTerms {
   return {
     year,
-    liChun: generateLiChunDate(year),         // ~Feb 4
-    jingZhe: new Date(Date.UTC(year, 2, 5, 12, 0, 0)),    // ~Mar 5-6
-    qingMing: new Date(Date.UTC(year, 3, 4, 12, 0, 0)),   // ~Apr 4-5
-    liXia: new Date(Date.UTC(year, 4, 5, 12, 0, 0)),      // ~May 5-6
-    mangZhong: new Date(Date.UTC(year, 5, 5, 12, 0, 0)),  // ~Jun 5-6
-    xiaoShu: new Date(Date.UTC(year, 6, 7, 12, 0, 0)),    // ~Jul 7-8
-    liQiu: new Date(Date.UTC(year, 7, 7, 12, 0, 0)),      // ~Aug 7-8
-    baiLu: new Date(Date.UTC(year, 8, 7, 12, 0, 0)),      // ~Sep 7-8
-    hanLu: new Date(Date.UTC(year, 9, 8, 12, 0, 0)),      // ~Oct 8-9
-    liDong: new Date(Date.UTC(year, 10, 7, 12, 0, 0)),    // ~Nov 7-8
-    daXue: new Date(Date.UTC(year, 11, 7, 12, 0, 0)),     // ~Dec 7-8
-    xiaoHan: new Date(Date.UTC(year + 1, 0, 5, 12, 0, 0)), // ~Jan 5-6 of next year
+    liChun: new Date(Date.UTC(year, 1, 4, 12, 0, 0)),      // Fixed: Feb 4
+    jingZhe: new Date(Date.UTC(year, 2, 5, 12, 0, 0)),     // Fixed: Mar 5
+    qingMing: new Date(Date.UTC(year, 3, 5, 12, 0, 0)),    // Fixed: Apr 5
+    liXia: new Date(Date.UTC(year, 4, 5, 12, 0, 0)),       // Fixed: May 5
+    mangZhong: new Date(Date.UTC(year, 5, 6, 12, 0, 0)),   // Fixed: Jun 6
+    xiaoShu: new Date(Date.UTC(year, 6, 7, 12, 0, 0)),     // Fixed: Jul 7
+    liQiu: new Date(Date.UTC(year, 7, 8, 12, 0, 0)),       // Fixed: Aug 8
+    baiLu: new Date(Date.UTC(year, 8, 8, 12, 0, 0)),       // Fixed: Sep 8
+    hanLu: new Date(Date.UTC(year, 9, 8, 12, 0, 0)),       // Fixed: Oct 8
+    liDong: new Date(Date.UTC(year, 10, 7, 12, 0, 0)),     // Fixed: Nov 7
+    daXue: new Date(Date.UTC(year, 11, 7, 12, 0, 0)),      // Fixed: Dec 7
+    xiaoHan: new Date(Date.UTC(year + 1, 0, 5, 12, 0, 0)), // Fixed: Jan 5 of next year
   }
 }
 
 /**
- * Import precise solar terms data from JSON file
+ * SIMPLIFIED VERSION - Uses fixed dates only (book method)
+ * Astronomical precision dates are not used
  */
-import solarTermsJson from './solar-terms.json'
-
-/**
- * Precise Li Chun dates from astronomical calculations (1900-2100)
- * Loaded from solar-terms.json on demand
- */
-const PRECISE_LI_CHUN_DATES: Record<number, Date> = {
-  1920: new Date('1920-02-05T02:23:00.000Z'),
-  1954: new Date('1954-02-04T08:26:00.000Z'),
-  1963: new Date('1963-02-04T12:51:00.000Z'),
-  1970: new Date('1970-02-04T05:11:00.000Z'),
-  1971: new Date('1971-02-04T11:27:00.000Z'),
-  1972: new Date('1972-02-04T17:17:00.000Z'),
-  1977: new Date('1977-02-03T22:24:00.000Z'),
-  1980: new Date('1980-02-04T15:53:00.000Z'),
-  1985: new Date('1985-02-03T21:00:00.000Z'),
-  1986: new Date('1986-02-04T02:50:00.000Z'),
-  1990: new Date('1990-02-04T02:08:00.000Z'),
-  1994: new Date('1994-02-04T13:05:00.000Z'),
-  1995: new Date('1995-02-04T07:15:00.000Z'),
-  1998: new Date('1998-02-04T00:44:00.000Z'),
-  1999: new Date('1999-02-04T06:33:00.000Z'),
-  2000: new Date('2000-02-04T12:23:00.000Z'),
-  2005: new Date('2005-02-03T17:30:00.000Z'),
-  2008: new Date('2008-02-04T10:59:00.000Z'),
-  2010: new Date('2010-02-03T22:38:00.000Z'),
-  2015: new Date('2015-02-04T03:45:00.000Z'),
-  2020: new Date('2020-02-04T08:53:00.000Z'),
-  2021: new Date(Date.UTC(2021, 1, 3, 22, 59, 0)),
-  2022: new Date(Date.UTC(2022, 1, 4, 4, 51, 0)),
-  2023: new Date(Date.UTC(2023, 1, 4, 10, 43, 0)),
-  2024: new Date('2024-02-04T08:11:00.000Z'),
-  2025: new Date(Date.UTC(2025, 1, 3, 22, 10, 0)),
-  2026: new Date(Date.UTC(2026, 1, 4, 3, 52, 0)),
-  2027: new Date(Date.UTC(2027, 1, 4, 9, 46, 0)),
-  2028: new Date(Date.UTC(2028, 1, 4, 15, 31, 0)),
-  2029: new Date(Date.UTC(2029, 1, 3, 21, 20, 0)),
-  2030: new Date(Date.UTC(2030, 1, 4, 3, 9, 0)),
-}
 
 /**
  * Determine data confidence level for a given year
@@ -187,7 +132,8 @@ const solarTermsCache = new Map<number, YearSolarTerms>()
 
 /**
  * Get solar terms for a specific year
- * Uses precise data from JSON when available, falls back to approximation
+ * SIMPLIFIED VERSION: Always uses fixed date ranges (book method)
+ * Never uses precise astronomical data
  */
 export function getSolarTermsForYear(year: number): YearSolarTerms {
   // Check cache first
@@ -195,36 +141,8 @@ export function getSolarTermsForYear(year: number): YearSolarTerms {
     return solarTermsCache.get(year)!
   }
 
-  // Try to load from JSON first
-  const yearData = solarTermsJson[year.toString() as keyof typeof solarTermsJson]
-  let terms: YearSolarTerms
-
-  if (yearData) {
-    // Use precise data from JSON
-    terms = {
-      year,
-      liChun: new Date(yearData.liChun),
-      jingZhe: new Date(yearData.jingZhe),
-      qingMing: new Date(yearData.qingMing),
-      liXia: new Date(yearData.liXia),
-      mangZhong: new Date(yearData.mangZhong),
-      xiaoShu: new Date(yearData.xiaoShu),
-      liQiu: new Date(yearData.liQiu),
-      baiLu: new Date(yearData.baiLu),
-      hanLu: new Date(yearData.hanLu),
-      liDong: new Date(yearData.liDong),
-      daXue: new Date((yearData as Record<string, string>).daxue || (yearData as Record<string, string>).daXue),
-      xiaoHan: new Date(yearData.xiaoHan),
-    }
-  } else {
-    // Fallback to approximation
-    terms = generateSolarTermsForYear(year)
-
-    // Override with precise Li Chun if available
-    if (PRECISE_LI_CHUN_DATES[year]) {
-      terms.liChun = PRECISE_LI_CHUN_DATES[year]
-    }
-  }
+  // Simplified version: Always use fixed date ranges
+  const terms = generateSolarTermsForYear(year)
 
   // Cache and return
   solarTermsCache.set(year, terms)
@@ -233,11 +151,10 @@ export function getSolarTermsForYear(year: number): YearSolarTerms {
 
 /**
  * Get Li Chun date for a specific year
+ * SIMPLIFIED VERSION: Always returns fixed February 4 (book method)
  */
 export function getLiChunForYear(year: number): Date {
-  if (PRECISE_LI_CHUN_DATES[year]) {
-    return PRECISE_LI_CHUN_DATES[year]
-  }
+  // Simplified version always uses fixed February 4
   return generateLiChunDate(year)
 }
 
