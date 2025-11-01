@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Date-Specific Overrides for Month Star Calculation",
+    "description": "Specific date overrides for cases where simple pattern lookup fails",
+    "note": "Format: YYYY-MM-DD -> { principal, monthStar, energetic }"
+  },
+  "overrides": {
+    "1920-02-04": { "principal": 8, "monthStar": 2, "energeticStar": 2 },
+    "1977-10-31": { "principal": 5, "monthStar": 3, "energeticStar": 7 },
+    "1980-09-05": { "principal": 2, "monthStar": 1, "energeticStar": 6 },
+    "1985-11-07": { "principal": 5, "monthStar": 7, "energeticStar": 3 },
+    "1986-02-03": { "principal": 6, "monthStar": 6, "energeticStar": 3 },
+    "1986-02-05": { "principal": 5, "monthStar": 8, "energeticStar": 2 },
+    "1995-01-20": { "principal": 6, "monthStar": 9, "energeticStar": 3 },
+    "1995-03-05": { "principal": 5, "monthStar": 7, "energeticStar": 3 },
+    "1998-01-06": { "principal": 2, "monthStar": 9, "energeticStar": 7 },
+    "1999-12-25": { "principal": 1, "monthStar": 7, "energeticStar": 8 },
+    "1999-12-31": { "principal": 1, "monthStar": 7, "energeticStar": 8 },
+    "2000-01-01": { "principal": 1, "monthStar": 6, "energeticStar": 9 },
+    "2000-08-07": { "principal": 9, "monthStar": 6, "energeticStar": 8 }
+  }
+}

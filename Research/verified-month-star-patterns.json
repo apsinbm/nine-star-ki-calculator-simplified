@@ -1,0 +1,467 @@
+{
+  "description": "Verified month star patterns extracted from golden test cases",
+  "solarMonths": [
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+    "Jan"
+  ],
+  "patterns": {
+    "1": [
+      6,
+      null,
+      6,
+      5,
+      4,
+      3,
+      null,
+      1,
+      null,
+      null,
+      7,
+      8
+    ],
+    "2": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      9
+    ],
+    "3": [
+      null,
+      3,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      6
+    ],
+    "4": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      7,
+      null,
+      null
+    ],
+    "5": [
+      8,
+      7,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      3,
+      2,
+      null,
+      null
+    ],
+    "6": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9
+    ],
+    "7": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "8": [
+      null,
+      null,
+      null,
+      null,
+      7,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      2
+    ],
+    "9": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      8,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "testCases": [
+    {
+      "testId": "1",
+      "birthDate": "1986-03-15",
+      "principal": 5,
+      "monthStar": 7,
+      "energetic": 3,
+      "solarMonthIndex": 1
+    },
+    {
+      "testId": "2",
+      "birthDate": "1990-07-10",
+      "principal": 1,
+      "monthStar": 3,
+      "energetic": 3,
+      "solarMonthIndex": 5
+    },
+    {
+      "testId": "3",
+      "birthDate": "1995-11-20",
+      "principal": 5,
+      "monthStar": 2,
+      "energetic": 8,
+      "solarMonthIndex": 9
+    },
+    {
+      "testId": "4",
+      "birthDate": "1995-01-20",
+      "principal": 6,
+      "monthStar": 9,
+      "energetic": 3,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "5",
+      "birthDate": "1986-02-05",
+      "principal": 5,
+      "monthStar": 8,
+      "energetic": 2,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "6",
+      "birthDate": "1986-02-03",
+      "principal": 6,
+      "monthStar": 6,
+      "energetic": 3,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "7",
+      "birthDate": "1999-12-25",
+      "principal": 1,
+      "monthStar": 7,
+      "energetic": 8,
+      "solarMonthIndex": 10
+    },
+    {
+      "testId": "8",
+      "birthDate": "1971-01-31",
+      "principal": 3,
+      "monthStar": 6,
+      "energetic": 2,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "9",
+      "birthDate": "1954-04-20",
+      "principal": 1,
+      "monthStar": 6,
+      "energetic": 9,
+      "solarMonthIndex": 2
+    },
+    {
+      "testId": "10",
+      "birthDate": "2008-06-15",
+      "principal": 1,
+      "monthStar": 4,
+      "energetic": 2,
+      "solarMonthIndex": 4
+    },
+    {
+      "testId": "11",
+      "birthDate": "1972-09-10",
+      "principal": 1,
+      "monthStar": 1,
+      "energetic": 5,
+      "solarMonthIndex": 7
+    },
+    {
+      "testId": "12",
+      "birthDate": "1995-03-06",
+      "principal": 5,
+      "monthStar": 7,
+      "energetic": 3,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "13",
+      "birthDate": "1995-03-05",
+      "principal": 5,
+      "monthStar": 7,
+      "energetic": 3,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "14",
+      "birthDate": "2000-08-08",
+      "principal": 9,
+      "monthStar": 8,
+      "energetic": 6,
+      "solarMonthIndex": 5
+    },
+    {
+      "testId": "15",
+      "birthDate": "2000-08-07",
+      "principal": 9,
+      "monthStar": 6,
+      "energetic": 8,
+      "solarMonthIndex": 5
+    },
+    {
+      "testId": "16",
+      "birthDate": "1920-02-04",
+      "principal": 8,
+      "monthStar": 2,
+      "energetic": 2,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "17",
+      "birthDate": "2020-02-04",
+      "principal": 1,
+      "monthStar": 8,
+      "energetic": 7,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "18",
+      "birthDate": "1999-12-31",
+      "principal": 1,
+      "monthStar": 7,
+      "energetic": 8,
+      "solarMonthIndex": 10
+    },
+    {
+      "testId": "19",
+      "birthDate": "2000-01-01",
+      "principal": 1,
+      "monthStar": 6,
+      "energetic": 9,
+      "solarMonthIndex": 10
+    },
+    {
+      "testId": "20",
+      "birthDate": "1963-05-15",
+      "principal": 1,
+      "monthStar": 5,
+      "energetic": 1,
+      "solarMonthIndex": 3
+    },
+    {
+      "testId": "21",
+      "birthDate": "1977-10-31",
+      "principal": 5,
+      "monthStar": 3,
+      "energetic": 7,
+      "solarMonthIndex": 8
+    },
+    {
+      "testId": "22",
+      "birthDate": "1985-11-08",
+      "principal": 5,
+      "monthStar": 2,
+      "energetic": 8,
+      "solarMonthIndex": 9
+    },
+    {
+      "testId": "23",
+      "birthDate": "1985-11-07",
+      "principal": 5,
+      "monthStar": 7,
+      "energetic": 3,
+      "solarMonthIndex": 8
+    },
+    {
+      "testId": "24",
+      "birthDate": "2015-04-05",
+      "principal": 3,
+      "monthStar": 3,
+      "energetic": 5,
+      "solarMonthIndex": 1
+    },
+    {
+      "testId": "25",
+      "birthDate": "2015-04-04",
+      "principal": 3,
+      "monthStar": 6,
+      "energetic": 2,
+      "solarMonthIndex": 1
+    },
+    {
+      "testId": "26",
+      "birthDate": "2010-06-21",
+      "principal": 8,
+      "monthStar": 7,
+      "energetic": 6,
+      "solarMonthIndex": 4
+    },
+    {
+      "testId": "27",
+      "birthDate": "2005-12-07",
+      "principal": 4,
+      "monthStar": 7,
+      "energetic": 2,
+      "solarMonthIndex": 9
+    },
+    {
+      "testId": "28",
+      "birthDate": "1998-01-06",
+      "principal": 2,
+      "monthStar": 9,
+      "energetic": 7,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "29",
+      "birthDate": "2024-02-03",
+      "principal": 1,
+      "monthStar": 6,
+      "energetic": 9,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "30",
+      "birthDate": "2024-02-04",
+      "principal": 1,
+      "monthStar": 8,
+      "energetic": 7,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "31",
+      "birthDate": "1954-04-15",
+      "principal": 1,
+      "monthStar": 6,
+      "energetic": 9,
+      "solarMonthIndex": 2
+    },
+    {
+      "testId": "32",
+      "birthDate": "1972-07-20",
+      "principal": 1,
+      "monthStar": 3,
+      "energetic": 3,
+      "solarMonthIndex": 5
+    },
+    {
+      "testId": "33",
+      "birthDate": "1980-09-05",
+      "principal": 2,
+      "monthStar": 1,
+      "energetic": 6,
+      "solarMonthIndex": 6
+    },
+    {
+      "testId": "34",
+      "birthDate": "2024-02-04 02:00",
+      "principal": 1,
+      "monthStar": 6,
+      "energetic": 9,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "35",
+      "birthDate": "2024-02-04 18:00",
+      "principal": 1,
+      "monthStar": 8,
+      "energetic": 7,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "36",
+      "birthDate": "2024-02-04 02:00",
+      "principal": 1,
+      "monthStar": 8,
+      "energetic": 7,
+      "solarMonthIndex": 0
+    },
+    {
+      "testId": "37",
+      "birthDate": "2024-02-03 20:00",
+      "principal": 1,
+      "monthStar": 8,
+      "energetic": 7,
+      "solarMonthIndex": 11
+    },
+    {
+      "testId": "38",
+      "birthDate": "1986-03-15",
+      "principal": 5,
+      "monthStar": 7,
+      "energetic": 3,
+      "solarMonthIndex": 1
+    },
+    {
+      "testId": "39",
+      "birthDate": "1990-07-10",
+      "principal": 1,
+      "monthStar": 3,
+      "energetic": 3,
+      "solarMonthIndex": 5
+    },
+    {
+      "testId": "40",
+      "birthDate": "1995-11-20",
+      "principal": 5,
+      "monthStar": 2,
+      "energetic": 8,
+      "solarMonthIndex": 9
+    }
+  ]
+}

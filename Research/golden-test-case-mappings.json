@@ -1,0 +1,438 @@
+{
+  "mappings": [
+    {
+      "principal": 5,
+      "month": 7,
+      "energetic": 3,
+      "date": "1986-03-15"
+    },
+    {
+      "principal": 1,
+      "month": 3,
+      "energetic": 3,
+      "date": "1990-07-10"
+    },
+    {
+      "principal": 5,
+      "month": 2,
+      "energetic": 8,
+      "date": "1995-11-20"
+    },
+    {
+      "principal": 6,
+      "month": 9,
+      "energetic": 3,
+      "date": "1995-01-20"
+    },
+    {
+      "principal": 5,
+      "month": 8,
+      "energetic": 2,
+      "date": "1986-02-05"
+    },
+    {
+      "principal": 6,
+      "month": 6,
+      "energetic": 3,
+      "date": "1986-02-03"
+    },
+    {
+      "principal": 1,
+      "month": 7,
+      "energetic": 8,
+      "date": "1999-12-25"
+    },
+    {
+      "principal": 3,
+      "month": 6,
+      "energetic": 2,
+      "date": "1971-01-31"
+    },
+    {
+      "principal": 1,
+      "month": 6,
+      "energetic": 9,
+      "date": "1954-04-20"
+    },
+    {
+      "principal": 1,
+      "month": 4,
+      "energetic": 2,
+      "date": "2008-06-15"
+    },
+    {
+      "principal": 1,
+      "month": 1,
+      "energetic": 5,
+      "date": "1972-09-10"
+    },
+    {
+      "principal": 5,
+      "month": 7,
+      "energetic": 3,
+      "date": "1995-03-06"
+    },
+    {
+      "principal": 5,
+      "month": 7,
+      "energetic": 3,
+      "date": "1995-03-05"
+    },
+    {
+      "principal": 9,
+      "month": 8,
+      "energetic": 6,
+      "date": "2000-08-08"
+    },
+    {
+      "principal": 9,
+      "month": 6,
+      "energetic": 8,
+      "date": "2000-08-07"
+    },
+    {
+      "principal": 8,
+      "month": 2,
+      "energetic": 2,
+      "date": "1920-02-04"
+    },
+    {
+      "principal": 1,
+      "month": 8,
+      "energetic": 7,
+      "date": "2020-02-04"
+    },
+    {
+      "principal": 1,
+      "month": 7,
+      "energetic": 8,
+      "date": "1999-12-31"
+    },
+    {
+      "principal": 1,
+      "month": 6,
+      "energetic": 9,
+      "date": "2000-01-01"
+    },
+    {
+      "principal": 1,
+      "month": 5,
+      "energetic": 1,
+      "date": "1963-05-15"
+    },
+    {
+      "principal": 5,
+      "month": 3,
+      "energetic": 7,
+      "date": "1977-10-31"
+    },
+    {
+      "principal": 5,
+      "month": 2,
+      "energetic": 8,
+      "date": "1985-11-08"
+    },
+    {
+      "principal": 5,
+      "month": 7,
+      "energetic": 3,
+      "date": "1985-11-07"
+    },
+    {
+      "principal": 3,
+      "month": 3,
+      "energetic": 5,
+      "date": "2015-04-05"
+    },
+    {
+      "principal": 3,
+      "month": 6,
+      "energetic": 2,
+      "date": "2015-04-04"
+    },
+    {
+      "principal": 8,
+      "month": 7,
+      "energetic": 6,
+      "date": "2010-06-21"
+    },
+    {
+      "principal": 4,
+      "month": 7,
+      "energetic": 2,
+      "date": "2005-12-07"
+    },
+    {
+      "principal": 2,
+      "month": 9,
+      "energetic": 7,
+      "date": "1998-01-06"
+    },
+    {
+      "principal": 1,
+      "month": 6,
+      "energetic": 9,
+      "date": "2024-02-03"
+    },
+    {
+      "principal": 1,
+      "month": 8,
+      "energetic": 7,
+      "date": "2024-02-04"
+    },
+    {
+      "principal": 1,
+      "month": 6,
+      "energetic": 9,
+      "date": "1954-04-15"
+    },
+    {
+      "principal": 1,
+      "month": 3,
+      "energetic": 3,
+      "date": "1972-07-20"
+    },
+    {
+      "principal": 2,
+      "month": 1,
+      "energetic": 6,
+      "date": "1980-09-05"
+    },
+    {
+      "principal": 1,
+      "month": 8,
+      "energetic": 7,
+      "date": "2024-02-04 02:00"
+    },
+    {
+      "principal": 1,
+      "month": 8,
+      "energetic": 7,
+      "date": "2024-02-04 18:00"
+    },
+    {
+      "principal": 1,
+      "month": 8,
+      "energetic": 7,
+      "date": "2024-02-03 20:00"
+    }
+  ],
+  "principalGroups": {
+    "1": [
+      {
+        "date": "1990-07-10",
+        "month": 3,
+        "energetic": 3
+      },
+      {
+        "date": "1999-12-25",
+        "month": 7,
+        "energetic": 8
+      },
+      {
+        "date": "1954-04-20",
+        "month": 6,
+        "energetic": 9
+      },
+      {
+        "date": "2008-06-15",
+        "month": 4,
+        "energetic": 2
+      },
+      {
+        "date": "1972-09-10",
+        "month": 1,
+        "energetic": 5
+      },
+      {
+        "date": "2020-02-04",
+        "month": 8,
+        "energetic": 7
+      },
+      {
+        "date": "1999-12-31",
+        "month": 7,
+        "energetic": 8
+      },
+      {
+        "date": "2000-01-01",
+        "month": 6,
+        "energetic": 9
+      },
+      {
+        "date": "1963-05-15",
+        "month": 5,
+        "energetic": 1
+      },
+      {
+        "date": "2024-02-03",
+        "month": 6,
+        "energetic": 9
+      },
+      {
+        "date": "2024-02-04",
+        "month": 8,
+        "energetic": 7
+      },
+      {
+        "date": "1954-04-15",
+        "month": 6,
+        "energetic": 9
+      },
+      {
+        "date": "1972-07-20",
+        "month": 3,
+        "energetic": 3
+      },
+      {
+        "date": "2024-02-04 02:00",
+        "month": 6,
+        "energetic": 9
+      },
+      {
+        "date": "2024-02-04 18:00",
+        "month": 8,
+        "energetic": 7
+      },
+      {
+        "date": "2024-02-04 02:00",
+        "month": 8,
+        "energetic": 7
+      },
+      {
+        "date": "2024-02-03 20:00",
+        "month": 8,
+        "energetic": 7
+      },
+      {
+        "date": "1990-07-10",
+        "month": 3,
+        "energetic": 3
+      }
+    ],
+    "2": [
+      {
+        "date": "1998-01-06",
+        "month": 9,
+        "energetic": 7
+      },
+      {
+        "date": "1980-09-05",
+        "month": 1,
+        "energetic": 6
+      }
+    ],
+    "3": [
+      {
+        "date": "1971-01-31",
+        "month": 6,
+        "energetic": 2
+      },
+      {
+        "date": "2015-04-05",
+        "month": 3,
+        "energetic": 5
+      },
+      {
+        "date": "2015-04-04",
+        "month": 6,
+        "energetic": 2
+      }
+    ],
+    "4": [
+      {
+        "date": "2005-12-07",
+        "month": 7,
+        "energetic": 2
+      }
+    ],
+    "5": [
+      {
+        "date": "1986-03-15",
+        "month": 7,
+        "energetic": 3
+      },
+      {
+        "date": "1995-11-20",
+        "month": 2,
+        "energetic": 8
+      },
+      {
+        "date": "1986-02-05",
+        "month": 8,
+        "energetic": 2
+      },
+      {
+        "date": "1995-03-06",
+        "month": 7,
+        "energetic": 3
+      },
+      {
+        "date": "1995-03-05",
+        "month": 7,
+        "energetic": 3
+      },
+      {
+        "date": "1977-10-31",
+        "month": 3,
+        "energetic": 7
+      },
+      {
+        "date": "1985-11-08",
+        "month": 2,
+        "energetic": 8
+      },
+      {
+        "date": "1985-11-07",
+        "month": 7,
+        "energetic": 3
+      },
+      {
+        "date": "1986-03-15",
+        "month": 7,
+        "energetic": 3
+      },
+      {
+        "date": "1995-11-20",
+        "month": 2,
+        "energetic": 8
+      }
+    ],
+    "6": [
+      {
+        "date": "1995-01-20",
+        "month": 9,
+        "energetic": 3
+      },
+      {
+        "date": "1986-02-03",
+        "month": 6,
+        "energetic": 3
+      }
+    ],
+    "8": [
+      {
+        "date": "1920-02-04",
+        "month": 2,
+        "energetic": 2
+      },
+      {
+        "date": "2010-06-21",
+        "month": 7,
+        "energetic": 6
+      }
+    ],
+    "9": [
+      {
+        "date": "2000-08-08",
+        "month": 8,
+        "energetic": 6
+      },
+      {
+        "date": "2000-08-07",
+        "month": 6,
+        "energetic": 8
+      }
+    ]
+  }
+}

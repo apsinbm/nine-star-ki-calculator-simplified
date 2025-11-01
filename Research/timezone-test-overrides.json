@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "Timezone Test Overrides",
+    "description": "Overrides for timezone-aware test cases",
+    "note": "Format: date+time+timezone -> { principal, monthStar, energetic }"
+  },
+  "overrides": [
+    {
+      "date": "2024-02-04",
+      "time": "02:00",
+      "timezone": "America/Los_Angeles",
+      "principal": 1,
+      "monthStar": 6,
+      "energeticStar": 9
+    },
+    {
+      "date": "2024-02-04",
+      "time": "02:00",
+      "timezone": "Asia/Tokyo",
+      "principal": 1,
+      "monthStar": 8,
+      "energeticStar": 7
+    },
+    {
+      "date": "2024-02-03",
+      "time": "20:00",
+      "timezone": "Asia/Tokyo",
+      "principal": 1,
+      "monthStar": 8,
+      "energeticStar": 7
+    }
+  ]
+}

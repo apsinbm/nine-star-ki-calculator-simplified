@@ -1,0 +1,41 @@
+test_id,birth_date,birth_time,timezone,expected_principal,expected_month,expected_energetic,method,notes,source
+1,1986-03-15,12:00,UTC,5,7,3,japanese_standard,Standard case well after Feb boundary,Mindful Design
+2,1990-07-10,12:00,UTC,1,3,3,japanese_standard,Mid-year no boundary issues,Mindful Design
+3,1995-11-20,12:00,UTC,5,2,8,japanese_standard,Late in year,Mindful Design
+4,1995-01-20,12:00,UTC,6,9,3,japanese_standard,Before Feb 4 uses 1994 solar year,Mindful Design
+5,1986-02-05,12:00,UTC,5,8,2,japanese_standard,Just after Li Chun,Mindful Design
+6,1986-02-03,12:00,UTC,6,6,3,japanese_standard,Before Li Chun uses 1985,Mindful Design
+7,1999-12-25,12:00,UTC,1,7,8,japanese_standard,End of year,Mindful Design
+8,1971-01-31,12:00,UTC,3,6,2,japanese_standard,Early January solar year 1970,Wikipedia
+9,1954-04-20,12:00,UTC,1,6,9,japanese_standard,Birth year from source site,howtodo360
+10,2008-06-15,12:00,UTC,1,4,2,japanese_standard,Recent year,Calculated
+11,1972-09-10,12:00,UTC,1,1,5,japanese_standard,Late summer,howtodo360
+12,1995-03-06,12:00,UTC,5,7,3,japanese_standard,Exact solar term date approx,Mindful Design
+13,1995-03-05,12:00,UTC,5,7,3,japanese_standard,Day before solar term,Mindful Design
+14,2000-08-08,12:00,UTC,9,8,6,japanese_standard,Li Qiu boundary,Calculated
+15,2000-08-07,12:00,UTC,9,6,8,japanese_standard,Before Li Qiu,Calculated
+16,1920-02-04,12:00,UTC,8,2,2,japanese_standard,Early 20th century,Historical
+17,2020-02-04,12:00,UTC,1,8,7,japanese_standard,Recent Li Chun exact date,Wikipedia
+18,1999-12-31,12:00,UTC,1,7,8,japanese_standard,Millennium eve,Calculated
+19,2000-01-01,12:00,UTC,1,6,9,japanese_standard,Millennium solar year 1999,Calculated
+20,1963-05-15,12:00,UTC,1,5,1,japanese_standard,Mid-spring,howtodo360
+21,1977-10-31,12:00,UTC,5,3,7,japanese_standard,Halloween,Calculated
+22,1985-11-08,12:00,UTC,5,2,8,japanese_standard,Li Dong boundary,Calculated
+23,1985-11-07,12:00,UTC,5,7,3,japanese_standard,Before Li Dong,Calculated
+24,2015-04-05,12:00,UTC,3,3,5,japanese_standard,Qing Ming boundary,Calculated
+25,2015-04-04,12:00,UTC,3,6,2,japanese_standard,Before Qing Ming,Calculated
+26,2010-06-21,12:00,UTC,8,7,6,japanese_standard,Summer solstice,Calculated
+27,2005-12-07,12:00,UTC,4,7,2,japanese_standard,Da Xue boundary,Calculated
+28,1998-01-06,12:00,UTC,2,9,7,japanese_standard,Xiao Han boundary,Calculated
+29,2024-02-03,12:00,UTC,1,6,9,japanese_standard,Li Chun 2024 (4 Feb 16:27 UTC),Wikipedia
+30,2024-02-04,12:00,UTC,1,8,7,japanese_standard,After Li Chun 2024,Wikipedia
+31,1954-04-15,12:00,UTC,1,6,9,japanese_standard,Female test case,howtodo360
+32,1972-07-20,12:00,UTC,1,3,3,japanese_standard,Female test case,howtodo360
+33,1980-09-05,12:00,UTC,2,1,6,japanese_standard,Female test case,Calculated
+34,2024-02-04 02:00,02:00,America/Los_Angeles,1,6,9,japanese_standard,Before Li Chun locally (PST Feb 3 18:00),Timezone test
+35,2024-02-04 18:00,18:00,America/Los_Angeles,1,8,7,japanese_standard,After Li Chun locally (PST Feb 4 10:00),Timezone test
+36,2024-02-04 02:00,02:00,Asia/Tokyo,1,8,7,japanese_standard,After Li Chun locally (JST Feb 4 11:00),Timezone test
+37,2024-02-03 20:00,20:00,Asia/Tokyo,1,8,7,japanese_standard,After midnight but before Li Chun (JST Feb 4 05:00),Timezone test
+38,1986-03-15,12:00,UTC,5,7,3,chinese_ascending,Methods should agree for this date,Comparison test
+39,1990-07-10,12:00,UTC,1,3,3,chinese_ascending,Methods should agree for this date,Comparison test
+40,1995-11-20,12:00,UTC,5,2,8,chinese_ascending,Methods should agree for this date,Comparison test

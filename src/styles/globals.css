@@ -1,0 +1,359 @@
+/**
+ * Global Styles - Nine Star Ki Calculator
+ * Japanese-inspired minimalist design system
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * CSS Custom Properties
+ * Design tokens for consistent theming
+ */
+:root {
+  /* Spacing rhythm (8px base) */
+  --spacing-unit: 0.5rem;
+
+  /* Typography scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  /* Line height */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  --shadow-medium: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+}
+
+/**
+ * Base Layer
+ * Foundational styles and resets
+ */
+@layer base {
+  /* Smooth font rendering */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Body defaults - minimal, calm background */
+  body {
+    @apply bg-sumi-50 text-sumi-900;
+    @apply font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  /* Headings - clean hierarchy */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    @apply text-sumi-900;
+    @apply tracking-tight;
+    font-weight: 500;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+    @apply mb-6;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+    @apply mb-5;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+    @apply mb-4;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+    @apply mb-3;
+  }
+
+  /* Links - subtle underline on hover */
+  a {
+    @apply text-ai-700;
+    @apply transition-colors duration-200;
+    text-decoration: none;
+  }
+
+  a:hover {
+    @apply text-ai-900;
+    @apply underline decoration-ai-300;
+  }
+
+  /* Focus states - accessible and minimal */
+  *:focus-visible {
+    @apply outline-none;
+    @apply ring-2 ring-ai-500 ring-offset-2;
+    @apply rounded;
+    @apply transition-shadow duration-200;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove default button styles */
+  button {
+    @apply font-sans;
+  }
+}
+
+/**
+ * Component Layer
+ * Reusable component patterns
+ */
+@layer components {
+  /* Card component - soft, elevated surface */
+  .card {
+    @apply bg-white;
+    @apply rounded-xl;
+    @apply shadow-soft;
+    @apply border border-sumi-100;
+    @apply p-6;
+    @apply transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-medium;
+    @apply border-sumi-200;
+  }
+
+  /* Primary button - confident action */
+  .btn-primary {
+    @apply px-6 py-3;
+    @apply bg-ai-600 text-white;
+    @apply rounded-lg;
+    @apply font-medium;
+    @apply transition-all duration-200;
+    @apply shadow-subtle;
+    @apply hover:bg-ai-700;
+    @apply hover:shadow-soft;
+    @apply hover:-translate-y-0.5;
+    @apply active:bg-ai-800;
+    @apply active:translate-y-0;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  /* Secondary button - subtle alternative */
+  .btn-secondary {
+    @apply px-6 py-3;
+    @apply bg-sumi-100 text-sumi-900;
+    @apply rounded-lg;
+    @apply font-medium;
+    @apply transition-all duration-200;
+    @apply hover:bg-sumi-200;
+    @apply active:bg-sumi-300;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Input field - clean and minimal */
+  .input {
+    @apply w-full;
+    @apply px-4 py-3;
+    @apply bg-white;
+    @apply border border-sumi-200;
+    @apply rounded-lg;
+    @apply text-sumi-900;
+    @apply placeholder-sumi-400;
+    @apply transition-all duration-200;
+    @apply focus:border-ai-500 focus:ring-2 focus:ring-ai-100;
+  }
+
+  .input:disabled {
+    @apply bg-sumi-50 text-sumi-500 cursor-not-allowed;
+  }
+
+  /* Label - clear and consistent */
+  .label {
+    @apply block;
+    @apply text-sm font-medium;
+    @apply text-sumi-700;
+    @apply mb-2;
+  }
+
+  /* Badge/tag - subtle emphasis */
+  .badge {
+    @apply inline-flex items-center;
+    @apply px-3 py-1;
+    @apply text-xs font-medium;
+    @apply rounded-full;
+    @apply bg-sumi-100 text-sumi-700;
+  }
+
+  /* Divider - subtle separation */
+  .divider {
+    @apply border-t border-sumi-200;
+    @apply my-6;
+  }
+
+  /* Container - consistent max-width and centering */
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Solar Term Timeline Components */
+  .timeline-birth-marker {
+    @apply h-8 w-8 rounded-full;
+    @apply flex items-center justify-center;
+    @apply ring-4 ring-white ring-offset-2;
+    @apply transition-all duration-300;
+    @apply shadow-soft;
+    cursor: default;
+  }
+
+  .timeline-birth-marker:hover {
+    @apply ring-offset-4;
+    @apply shadow-medium;
+  }
+
+  .timeline-term-marker {
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .timeline-term-marker:hover {
+    transform: scale(1.1);
+  }
+
+  .timeline-term-nearest {
+    transform: scale(1.25);
+  }
+
+  .timeline-tooltip {
+    @apply absolute;
+    @apply bottom-full left-1/2 -translate-x-1/2;
+    @apply mb-2;
+    @apply px-4 py-3;
+    @apply bg-sumi-900 text-white;
+    @apply rounded-lg;
+    @apply whitespace-nowrap;
+    @apply shadow-medium;
+    @apply z-10;
+    @apply text-sm;
+    animation: slideUp 200ms ease-out;
+  }
+
+  .timeline-tooltip::after {
+    content: '';
+    @apply absolute;
+    @apply top-full left-1/2 -translate-x-1/2;
+    @apply border-4 border-transparent border-t-sumi-900;
+  }
+
+  /* DST Warning Styles */
+  .dst-warning {
+    @apply rounded-lg border-2 border-amber-200 bg-amber-50 p-4;
+  }
+}
+
+/**
+ * Utility Layer
+ * Custom utility classes
+ */
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Japanese-inspired vertical rhythm */
+  .stack-y {
+    @apply space-y-4;
+  }
+
+  .stack-y-lg {
+    @apply space-y-8;
+  }
+
+  /* Smooth page transitions */
+  .page-transition {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+
+  /* Subtle glassmorphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/**
+ * Animation definitions
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * Print styles - clean and minimal
+ */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
